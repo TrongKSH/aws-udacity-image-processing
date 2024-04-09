@@ -52,7 +52,7 @@ app.get("/filteredimage", async (req, res) => {
         // 4. delete file after finish
         deleteLocalFiles([result]);
       });
-    })
+    }).catch (error=>{console.log("Error", error.message);})
 });
 
 // Start the Server
